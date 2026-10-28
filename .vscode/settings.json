@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Lab9.sln"
+    "dotnet.defaultSolution": "Lab10.sln"
 }
