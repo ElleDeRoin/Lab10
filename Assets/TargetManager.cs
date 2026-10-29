@@ -142,7 +142,7 @@ public class TargetManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Target Speed is: " + targets[i].speed);
+                //Debug.Log("Target Speed is: " + targets[i].speed);
                 if (targets[i].targetPrefab.name.Equals("LargeTarget(Clone)"))
                 {
                     targets[i].targetPrefab.transform.Translate(Vector3.down * targets[i].speed * Time.deltaTime);

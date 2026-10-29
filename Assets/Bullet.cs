@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Bullet hit: " + other.gameObject.name + " with tag: " + other.tag);
+        //Debug.Log("Bullet hit: " + other.gameObject.name + " with tag: " + other.tag);
         if (other.CompareTag(targetTag)) {
             OnHitTarget?.Invoke(other.gameObject);
             ReturnToPool();

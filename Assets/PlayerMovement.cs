@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -37,6 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Space)) {
             TryFire();
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            SavingService.SaveGame("JSONSaveFile");
+        }
+
+        if (Input.GetKey(KeyCode.L))
+        {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SavingService.LoadGame("JSONSaveFile");
         }
     }
 

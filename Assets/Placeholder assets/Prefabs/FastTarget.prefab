@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6419083672450824997}
   - component: {fileID: 5374536792384578408}
   - component: {fileID: 135056056877178677}
+  - component: {fileID: 6997712256307708163}
   m_Layer: 0
   m_Name: FastTarget
   m_TagString: Target
@@ -129,3 +130,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6997712256307708163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895650720938996201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a0cf7c6c6a1bf42b2fe2e4494fb0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveID: 
