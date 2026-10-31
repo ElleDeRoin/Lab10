@@ -48,6 +48,11 @@ public static class SavingService
         System.GC.Collect();
     }
 
+    public static void SaveScore(string fileName, byte[] binaryData)
+    {
+
+    }
+
     public static void LoadGame(string fileName)
     {
         var dataPath = Path.Combine(Application.persistentDataPath, fileName);
@@ -81,6 +86,11 @@ public static class SavingService
             SceneManager.sceneLoaded += LoadObjectsAfterSceneLoad;
         }
         return;
+    }
+
+    public static void LoadScore(string fileName)
+    {
+
     }
 
     /*
