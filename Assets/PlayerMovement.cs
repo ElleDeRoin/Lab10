@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float maxLeft = -8f;
     public float maxRight = 8f;
+    private ScoreSaver _scoreSaver;
 
     // Stats
     public int points;
@@ -19,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         points = 0;
+        _scoreSaver = FindAnyObjectByType<ScoreSaver>();
     }
 
     private void Update()
@@ -43,12 +47,19 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             SavingService.SaveGame("JSONSaveFile");
+
+            // binary, save score
+            _scoreSaver.SaveScore(points);
         }
 
         if (Input.GetKey(KeyCode.L))
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             SavingService.LoadGame("JSONSaveFile");
+
+            // binary, load score from file
+            points = _scoreSaver.LoadScore();
+
         }
     }
 
