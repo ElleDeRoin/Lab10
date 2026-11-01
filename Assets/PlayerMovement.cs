@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             TryFire();
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             SavingService.SaveGame("JSONSaveFile");
 
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             _scoreSaver.SaveScore(points);
         }
 
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             SavingService.LoadGame("JSONSaveFile");
