@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEditor.SearchService;
+// using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -83,7 +83,7 @@ public static class SavingService
                 System.GC.Collect();
                 //Debug.Log(data[OBJECTS_KEY]);
             }
-            SceneManager.sceneLoaded += LoadObjectsAfterSceneLoad;
+            LoadObjectsAfterSceneLoad(SceneManager.GetActiveScene(), LoadSceneMode.Single);
         }
         return;
     }
